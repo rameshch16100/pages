@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pocketo Privacy Policy</title>
+<meta name="description" content="How Pocketo handles your data: your financial records stay encrypted on your device.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Figtree:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+  /* Layout: one readable column; a quiet "at a glance" panel up top, then numbered policy sections with a contents list. */
+  :root {
+    --paper: #f6f9f8;
+    --sheet: #ffffff;
+    --ink: #10201b;
+    --muted: #4f6159;
+    --line: #dbe6e1;
+    --emerald: #0b7a5c;
+    --emerald-soft: #e3f3ec;
+    --flag: #fff1c7;
+    --flag-ink: #6b4b00;
+    --display: "Sora", "Segoe UI", system-ui, sans-serif;
+    --body: "Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0a1210; --sheet: #111b18; --ink: #e3eeea; --muted: #9db2aa;
+      --line: #253330; --emerald: #5cd3a6; --emerald-soft: #12352a;
+      --flag: #4a3a0c; --flag-ink: #ffe08a; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0a1210; --sheet: #111b18; --ink: #e3eeea; --muted: #9db2aa;
+    --line: #253330; --emerald: #5cd3a6; --emerald-soft: #12352a;
+    --flag: #4a3a0c; --flag-ink: #ffe08a; color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 1rem/1.65 var(--body);
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 40px 64px;
+  }
+  .page { max-width: 46rem; margin: 0 auto; display: grid; gap: 32px; }
+
+  header { display: grid; gap: 14px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand svg { width: 44px; height: 44px; flex: none; border-radius: 11px; }
+  .brand span { font: 700 1.15rem/1 var(--display); letter-spacing: -0.01em; }
+  h1 {
+    font: 700 clamp(1.9rem, 5vw, 2.6rem)/1.1 var(--display);
+    letter-spacing: -0.03em; margin: 0; text-wrap: balance;
+  }
+  .meta { color: var(--muted); margin: 0; font-size: 0.95rem; }
+  .meta strong { color: var(--ink); font-weight: 600; }
+
+  .glance {
+    background: var(--emerald-soft);
+    border-radius: 18px;
+    padding: 22px 24px;
+    display: grid; gap: 10px;
+  }
+  .glance h2 {
+    font: 600 0.78rem/1 var(--body); letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--emerald); margin: 0;
+  }
+  .glance ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 6px; }
+
+  nav { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: 16px; }
+  nav h2 { font: 600 0.78rem/1 var(--body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+  nav ol { margin: 0; padding-left: 1.4rem; columns: 2 16rem; column-gap: 32px; }
+  nav li { break-inside: avoid; padding-block: 2px; }
+
+  a { color: var(--emerald); text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--emerald); outline-offset: 2px; border-radius: 3px; }
+
+  main { display: grid; gap: 30px; counter-reset: sec; }
+  section { display: grid; gap: 8px; scroll-margin-top: 16px; }
+  section h2 {
+    counter-increment: sec;
+    font: 600 1.3rem/1.3 var(--display); letter-spacing: -0.015em;
+    margin: 0; text-wrap: balance;
+  }
+  section h2::before { content: counter(sec) ". "; color: var(--emerald); }
+  section h3 { font: 600 1.02rem/1.4 var(--body); margin: 8px 0 0; }
+  p, ul { margin: 0; }
+  ul { padding-left: 1.2rem; display: grid; gap: 4px; }
+  .muted { color: var(--muted); }
+
+  .fill {
+    background: var(--flag); color: var(--flag-ink);
+    padding: 1px 6px; border-radius: 6px; font-weight: 600;
+    user-select: all;
+  }
+  footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); padding-top: 18px; }
+</style>
+
+<div class="page">
+  <header>
+    <div class="brand">
+      <svg viewBox="0 0 1024 1024" aria-hidden="true">
+        <defs><linearGradient id="t" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#12A578"/><stop offset="1" stop-color="#0A6E53"/></linearGradient></defs>
+        <rect width="1024" height="1024" rx="229" fill="url(#t)"/>
+        <path fill="#FFFFFF" fill-rule="evenodd" d="M360 236H540A200 200 0 0 1 540 636H420V728A60 60 0 0 1 300 728V296A60 60 0 0 1 360 236ZM540 332A104 104 0 1 0 540 540A104 104 0 1 0 540 332Z"/>
+        <circle cx="540" cy="436" r="72" fill="#FBBF24"/>
+      </svg>
+      <span>Pocketo</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective <strong>19 October 2026</strong> · Applies to the Pocketo app (Android package <strong>com.app.pocketo</strong>), published by DevMatrix Labs, Ahmedabad, India.</p>
+  </header>
+
+  <aside class="glance" aria-labelledby="glance-title">
+    <h2 id="glance-title">At a glance</h2>
+    <ul>
+      <li>Your accounts, transactions, budgets and Khata records stay on your device, in an encrypted database. We have no servers that store them, and we can't see them.</li>
+      <li>You don't need an account. Pocketo has no sign-up and no analytics or crash-reporting tools.</li>
+      <li>Free users see ads from Google AdMob, which uses your device's advertising ID. Your financial data is never shared with Google or advertisers.</li>
+      <li>"Go ad-free" purchases are handled by Google Play or the App Store. We never see your payment details.</li>
+      <li>Uninstalling Pocketo deletes everything it stored on your device.</li>
+    </ul>
+  </aside>
+
+  <nav aria-labelledby="toc-title">
+    <h2 id="toc-title">Contents</h2>
+    <ol>
+      <li><a href="#who">Who we are</a></li>
+      <li><a href="#on-device">Data that stays on your device</a></li>
+      <li><a href="#backups">Backups and exports</a></li>
+      <li><a href="#permissions">Camera, microphone and other permissions</a></li>
+      <li><a href="#ads">Advertising</a></li>
+      <li><a href="#purchases">Purchases</a></li>
+      <li><a href="#feedback">Feedback emails</a></li>
+      <li><a href="#dont">What we don't do</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#deletion">Keeping and deleting data</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section id="who">
+      <h2>Who we are</h2>
+      <p>Pocketo is a personal money and expense tracker made by DevMatrix Labs, based in Ahmedabad, Gujarat, India ("we", "us"). This policy explains what information the app handles, where it goes, and the choices you have.</p>
+    </section>
+
+    <section id="on-device">
+      <h2>Data that stays on your device</h2>
+      <p>Everything you enter is stored only on your phone:</p>
+      <ul>
+        <li>accounts, balances and card details you choose to add (such as a card's last four digits, credit limit and due date);</li>
+        <li>income, expenses, transfers, categories, notes and amounts read from receipts;</li>
+        <li>budgets, savings goals and recurring entries;</li>
+        <li>Khata records, including the names you type for the people you lend to or borrow from;</li>
+        <li>your settings, such as language, currency, theme, reminder time and Home layout.</li>
+      </ul>
+      <p>This data is kept in a database encrypted with 256-bit ChaCha20-Poly1305. The encryption key is held in your device's secure storage (Android Keystore or the iOS Keychain). Pocketo has no server for this data, so we cannot see, access or recover it.</p>
+    </section>
+
+    <section id="backups">
+      <h2>Backups and exports</h2>
+      <p>If you create a backup, Pocketo writes an encrypted file (.pkh) protected by a password you choose. The key is derived from your password with PBKDF2 (100,000 iterations) and the file is encrypted with AES-256-GCM. We never receive your password, so a forgotten password cannot be recovered.</p>
+      <p>Backups, transaction exports (CSV), Khata reminder messages and Monthly Wrapped images leave the app only when you share or save them yourself, through your device's share sheet. Where they go from there (for example a cloud drive or a chat app) is controlled by that service's own privacy policy.</p>
+    </section>
+
+    <section id="permissions">
+      <h2>Camera, microphone and other permissions</h2>
+      <p>Pocketo asks for a permission only when you use the feature that needs it.</p>
+      <h3>Camera (receipt scanning)</h3>
+      <p>When you scan a receipt, the photo is read on your device by Google ML Kit's on-device text recognition to find the amount. The photo is not uploaded, and Pocketo doesn't keep it.</p>
+      <h3>Microphone and speech recognition (voice entry)</h3>
+      <p>Voice entry uses your device's built-in speech recognition service, provided by Google on Android and Apple on iOS. Depending on your device and settings, that service may process the audio on its own servers under its privacy policy. Pocketo receives only the recognised text and does not record or store audio.</p>
+      <h3>Fingerprint or face unlock (app lock)</h3>
+      <p>If you turn on the app lock, your device's operating system checks your fingerprint or face. Pocketo only learns whether the check succeeded and never receives biometric data.</p>
+      <h3>Notifications</h3>
+      <p>Daily reminders and due-date reminders are scheduled on your device. They are not sent through any server.</p>
+      <p class="muted">Pocketo does not read your SMS messages, contacts, location or photo library.</p>
+    </section>
+
+    <section id="ads">
+      <h2>Advertising</h2>
+      <p>The free version of Pocketo shows banner ads from <strong>Google AdMob</strong>. To show and measure ads, Google may collect your device's advertising ID, IP address, device and app information, an approximate location derived from your IP address, and how you interact with ads. Google uses this as described in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use its services</a>.</p>
+      <p>Pocketo never passes your financial information, entries or Khata records to Google or to any advertiser.</p>
+      <ul>
+        <li><strong>Consent:</strong> in regions that require it (such as the European Economic Area, the UK and Switzerland), Google's consent form appears before any ads load, and ads are personalised only if you agree. You can change your choice any time in <strong>More → Ad privacy choices</strong>.</li>
+        <li><strong>Advertising ID:</strong> you can reset or delete it in your device settings (on Android: Settings → Google → Ads; on iPhone, ads are not personalised unless you allow tracking).</li>
+        <li><strong>Removing ads:</strong> with a "Go ad-free" purchase, Pocketo stops loading the ad SDK and no ad requests are made.</li>
+      </ul>
+    </section>
+
+    <section id="purchases">
+      <h2>Purchases</h2>
+      <p>"Go ad-free" subscriptions and the lifetime purchase are processed by Google Play or the Apple App Store under their terms and privacy policies. We do not receive your name, card or payment details. Pocketo stores only which ad-free plan is active and when the store last confirmed it, on your device, and asks the store at launch whether your purchase is still active. You can manage or cancel subscriptions in your Google Play or App Store account.</p>
+    </section>
+
+    <section id="feedback">
+      <h2>Feedback emails</h2>
+      <p>If you send feedback from the app, it opens your own email app with a message addressed to us. We receive what you write, your email address, and, if you leave it included, basic details (app version, operating system version, language and theme) to help us fix problems. We use this only to reply and improve Pocketo, and we delete it on request.</p>
+    </section>
+
+    <section id="dont">
+      <h2>What we don't do</h2>
+      <ul>
+        <li>We don't sell or rent your data.</li>
+        <li>We don't require an account or collect your name, phone number or email inside the app.</li>
+        <li>We don't use analytics, crash-reporting or tracking tools of our own.</li>
+        <li>We don't upload your financial records anywhere.</li>
+      </ul>
+    </section>
+
+    <section id="children">
+      <h2>Children</h2>
+      <p>Pocketo is not directed at children under 13 (or the minimum age of digital consent where you live). We don't knowingly collect information from children, and the app's ads are not intended for them.</p>
+    </section>
+
+    <section id="deletion">
+      <h2>Keeping and deleting data</h2>
+      <p>Your data stays on your device until you delete it. To remove everything Pocketo stored, uninstall the app or clear its storage in your device settings. Because we keep no copy, this deletes your records permanently. Backup files you saved elsewhere are not affected; delete those where you stored them. To delete feedback emails you sent us, contact us at the address below.</p>
+    </section>
+
+    <section id="security">
+      <h2>Security</h2>
+      <p>We protect your records with an encrypted database, a key held in your device's secure hardware-backed storage, password-protected backups and an optional fingerprint or face lock. No method of storage is completely secure, so keep your device protected with a screen lock and keep your backup password safe.</p>
+    </section>
+
+    <section id="rights">
+      <h2>Your rights</h2>
+      <p>Depending on where you live, you may have rights to access, correct, delete or restrict the use of your personal data, and to object to or withdraw consent for its use (for example under the GDPR or India's Digital Personal Data Protection Act). Since your financial records exist only on your device, you can view, edit and delete them yourself in the app. For feedback emails, contact us. For data Google collects through ads, use your ad consent settings or Google's own controls.</p>
+    </section>
+
+    <section id="changes">
+      <h2>Changes to this policy</h2>
+      <p>If we change how Pocketo handles data, we'll update this page and its effective date before the change takes effect, and mention significant changes in the app's update notes.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact us</h2>
+      <p>DevMatrix Labs, Ahmedabad, Gujarat, India<br>Email: <a href="mailto:ramesh.c162@zohomail.in">ramesh.c162@zohomail.in</a></p>
+    </section>
+  </main>
+
+  <footer>© 2026 DevMatrix Labs.</footer>
+</div>
+
+</html>
